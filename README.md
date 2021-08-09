@@ -66,15 +66,15 @@ The sudoku Grid is composed of Sudoku cells arranged in a two dimentional vector
 
 Apart from the sudoku grid, there exists two buttons on the displayed interface that are check and new. Each of them is represented as a property in the sudoku class that would be reflecting if the user has requested a check of the current grid or a regeneration of the grid.
 
-## game.h and game.cpp
+### game.h and game.cpp
 
 These files define the Game class and the game loop Game::Run. The Game class stores the state of the game, including an instance of a Sudoku object and the game score. Aside from the game loop, the Game class also contains methods to generate the sodoku solution grid, update the state of the game (Game::Update), and set the score of the game.
 
-## render.h and render.cpp
+### render.h and render.cpp
 
 These files define the Renderer class which uses the SDL library to render the game to the screen. The Renderer class constructor creates the SDL window an SDL renderer and an SDL Font object that can draw in the window. The Renderer::Render method draws the layout of the sudoku grid, the control buttons and the currently selected cell in the window using the SDL renderer.
 
-## controller.g and controller.cpp
+### controller.g and controller.cpp
 
 These files define the Controller class. This class handles keyboard input using the SDL libary, and it sets the cell navigation direction based on the input.
 
