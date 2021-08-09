@@ -1,15 +1,20 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include "snake.h"
+#include "sudoku.h"
 
 class Controller {
  public:
-  void HandleInput(bool &running, Snake &snake) const;
+  void HandleInput(bool &running, Sudoku &sudoku);
+  void SetFirstSelectionPosition(Sudoku &sudoku);
 
  private:
-  void ChangeDirection(Snake &snake, Snake::Direction input,
-                       Snake::Direction opposite) const;
+  int sel_x {0};
+  int sel_y {0};
+  void HandleKeys(SDL_Event &e, Sudoku &sudoku);
+  void SetSelectedCell(Sudoku &sudoku, const bool select);
+
+
 };
 
 #endif
